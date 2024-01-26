@@ -1,0 +1,381 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif, Arial;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  padding-bottom: 10px;
+}
+
+.page-content-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+  width: 430px;
+  margin-top: 25px;
+}
+
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 7px;
+}
+
+.header h4 {
+  font-size: 1.15rem;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.header span {
+  opacity: .8;
+}
+
+.header i {
+  display: none;
+  margin-left: -50px;
+}
+
+.login-details-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 25px;
+}
+
+label {
+  width: 100%;
+  padding: 18px;
+  background-color: rgb(240, 240, 240);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 4px;
+}
+
+.color {
+  color: orange;
+}
+
+.password-cont{
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.password-cont span{
+  position: absolute;
+  top: -8px;
+  left: 8px;
+  font-size: .8rem;
+  background-color: white;
+  padding: 1px 6px;
+  color: orange;
+}
+
+.password-cont input{
+  flex: 1;
+  outline-color: orange;
+  padding: 18px;
+  border-radius: 4px;
+  border: 1px rgb(170, 170, 170) solid;
+}
+
+.password-cont input:focus {
+  
+}
+:focus::-webkit-input-placeholder {
+  display: none;
+  color: white;
+}
+
+.password-cont small{
+  position: absolute;
+  color: rgb(215, 18, 18);
+  bottom: -15px;
+  font-size: .75rem;
+  margin-left: 20px;
+}
+
+
+.login-link {
+  background-color: rgb(241, 156, 9);
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  padding: 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  width: 100%;
+  /* margin-top: 10px; */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.09);
+  transition: box-shadow .4s;
+}
+
+.login-link:hover , .login-link:focus{
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.reset-pass-link {
+  color: orange;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: -10px;
+  padding: 4px;
+}
+
+.reset-pass-link:focus, .reset-pass-link:hover {
+  background-color: rgba(255, 166, 0, 0.074);
+}
+
+
+.surpport-note {
+  font-size: .8rem;
+  text-align: center;
+  line-height: 20px;
+  margin-top: -15px;
+  width: 100%;
+}
+
+.logo {
+  font: 1.85rem sans-serif;
+  margin-top: -15px;
+}
+
+
+@media (min-width: 421px) and (max-width: 900px) {
+  .page-content-cont {
+    row-gap: 25px;
+    width: 60%;
+  }
+
+  .header i {
+    width: 100%;
+    display: none;
+    padding: 9px;
+  }
+
+  img {
+    width: 85px;
+    margin-top: -10px;
+    /* margin-bottom: -10px; */
+  }
+  
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    width: 100%;
+  }
+  
+  .header h4 {
+    margin-top: -1px;
+    font-size: 1.1rem;
+    margin-bottom: 0px;
+  }
+  
+  .header span {
+    opacity: .8;
+    font-size: .95rem;
+    text-align: center;
+  }
+  
+
+  .login-details-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 22px;
+  }
+  
+  label {
+    width: 100%;
+    padding: 18px;
+    font-size: .85rem;
+  }
+
+  label a {
+    text-decoration: none;
+  }
+
+  .password-cont span{
+    position: absolute;
+    top: -8px;
+    left: 8px;
+    font-size: .7rem;
+    background-color: white;
+    padding: 1px;
+    color: orange;
+  }
+  
+  .password-cont input{
+    padding: 18px;
+  }
+  
+  .password-cont input:focus {
+    
+  }
+  :focus::-webkit-input-placeholder {
+    display: none;
+    color: white;
+  }
+  
+  .login-link {
+    padding: 18px;
+    font-size: .85rem;
+  }
+  
+  .reset-pass-link {
+    font-size: .9rem;
+    padding: 4px;
+  }
+  
+  .surpport-note {
+    font-size: .85rem;
+    text-align: center;
+    line-height: 16px;
+    margin-top: -10px;
+    width: 100%;
+  }
+  
+  .logo {
+    font: 1.62rem sans-serif;
+    margin-top: -10px;
+  }  
+}
+
+
+@media (max-width: 420px) {
+  .page-content-cont {
+    row-gap: 15px;
+    width: 80%;
+    margin-top: -5px;
+  }
+
+  .entry-back {
+    text-decoration: none;
+    width: 100%;
+  }
+  
+  .entry-back i {
+    width: 100%;
+    display: inline !important;
+    padding: 9px;
+    margin-left: -20px;
+    color: black;
+  }
+
+  img {
+    width: 65px;
+    margin-top: -10px;
+    /* margin-bottom: -10px; */
+  }
+  
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 8px;
+    width: 100%;
+  }
+  
+  .header h4 {
+    margin-top: -1px;
+    font-size: .95rem;
+    margin-bottom: 0px;
+  }
+  
+  .header span {
+    opacity: .8;
+    font-size: .8rem;
+    text-align: center;
+  }
+  
+
+  .login-details-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 15px;
+    margin-top: 5px;
+  }
+  
+  label {
+    width: 100%;
+    padding: 10px;
+    font-size: .8rem;
+    /* margin-bottom: 2px; */
+  }
+
+  label a {
+    text-decoration: none;
+  }
+  
+  .password-cont span{
+    position: absolute;
+    top: -8px;
+    left: 8px;
+    font-size: .7rem;
+    background-color: white;
+    padding: 1px;
+    color: orange;
+  }
+  
+  .password-cont input{
+    padding: 10px;
+  }
+  
+  .password-cont input:focus {
+    
+  }
+  :focus::-webkit-input-placeholder {
+    display: none;
+    color: white;
+  }
+
+  .password-cont small{
+    position: absolute;
+    color: rgb(215, 18, 18);
+    bottom: -10px;
+    font-size: .63rem;
+    margin-left: 10px;
+  }
+  
+  .login-link {
+    padding: 10px;
+    font-size: .85rem;
+  }
+  
+  .reset-pass-link {
+    font-size: .8rem;
+    padding: 4px;
+  }
+  
+  .surpport-note {
+    font-size: .7rem;
+    text-align: center;
+    line-height: 16px;
+    margin-top: -5px;
+    width: 100%;
+  }
+  
+  .logo {
+    font: 1.3rem sans-serif;
+    margin-top: -5px;
+  }  
+}
+
+.hide {
+  display: none;
+}

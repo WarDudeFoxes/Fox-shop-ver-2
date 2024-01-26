@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Items</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="Images/cart.668e6453.svg" type="image/x-icon">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/saved-item.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav">
+        <div class="left-section hide-pop">
+          <i class="fa-solid fa-bars"></i>
+          <a href="index.html">
+            <div class="logo">Fox-<span>shop</span></div>
+          </a>
+        </div>
+        
+        <div class="middle-section hide-pop">
+          <label>
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="search" placeholder="Search products">
+          </label>
+          <button>Search</button>
+        </div>
+  
+        <div class="right-section">
+          <div class="account search-icon-pop">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </div>
+          <div class="account-container">
+            <div class="account">
+              <a href="#" class="joinProfile-link">
+                <i class="fa-regular fa-user" aria-hidden="true"></i>
+                <i class="fa fa-check-circle hide" aria-hidden="true"></i>
+              </a>
+              <div class="text account-text">Account</div>
+              <i class="fa fa-angle-down account-arrow" aria-hidden="true"></i>
+            </div>
+            <div class="sign-in-container hide">
+              <div class="sign-in-link">
+                <a href="#">SIGN IN</a>
+              </div>
+              <div class="options">
+                <a href="#" class="account-link">
+                  <div class="options-line">
+                    <i class="fa-regular fa-user" aria-hidden="true"></i>
+                    <div class="option-text">My Account</div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="options-line">
+                    <i class="fa-solid fa-shopping-bag" aria-hidden="true"></i>
+                    <div class="option-text">Orders</div>
+                  </div>
+                </a>
+                <a href="#" class="saved-items-link">
+                  <div class="options-line">
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                    <div class="option-text">Saved Items</div>
+                  </div>
+                </a>
+              </div>
+  
+            </div>
+          </div>
+          <div class="help-container">
+            <div class="account">
+              <i class="fa-regular fa-question-circle"></i>
+              <div class="text">Help</div>
+              <i class="fas fa-angle-down help-arrow" aria-hidden="true"></i>
+            </div>
+            <div class="helps hide">
+              <span>Place an order</span>
+              <span>Track an order</span>
+              <span>Cancel an order</span>
+              <span>Help Center</span>
+            </div>
+          </div>
+          
+          <a href="carts.html"> 
+            <div class="account hide-pop">
+              <div class="cart-image-container">
+                <span class="cart-quantity"></span>
+                <img src="Images/shopping-cart_5108212.png" alt="">
+                <div class="text">Cart</div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="pop-up-search hide">
+        <label>
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <input type="search" placeholder="Search products">
+        </label>
+      </div>
+    </nav>
+
+    <div class="saved-item-page-display-cont hide-pop">
+      <div class="links-containter">
+        <div class="link-row row-option">
+          <div class="link-row-icon ">
+            <i class="fa-regular fa-user" aria-hidden="true"></i>
+          </div>
+          <span>My Account</span>
+        </div>
+        <div class="link-row ">
+          <div class="link-row-icon">
+            <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+          </div>
+          <span>Orders</span>
+        </div>
+        <div class="link-row">
+          <div class="link-row-icon">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i>
+          </div>
+          <span>Saved Items</span>
+        </div>
+        <div class="link-row">
+          <div class="link-row-icon">
+            <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+          </div>
+          <span>Inbox</span>
+        </div>
+        <div class="link-row">
+          <div class="link-row-icon">
+            <i class="fa fa-hourglass-end" aria-hidden="true"></i>
+          </div>
+          <span>Pending Reviews</span>
+        </div>
+        <div class="link-row">
+          <div class="link-row-icon">
+            <i class="fas fa-store"></i>
+          </div>
+          <span>Followed Seller</span>
+        </div>
+        <div class="link-row">
+          <div class="link-row-icon">
+            <i class="fa fa-repeat" aria-hidden="true"></i>
+          </div>
+          <span>Recently Viewed</span>
+        </div>
+        <div class=" logout">
+          <span>LOGOUT</span>
+        </div>
+      </div>
+
+      <div class="saved-items-content-container">
+        <div class="save-item-header">
+          <a href="account.html">
+            <i class="fa fa-arrow-left"></i>
+          </a>
+          <span class="save-items-length"></span>
+        </div>
+        <div class="saved-item-product-container"></div>
+      </div>
+    </div>
+
+    <script type="module" src="Scripts/save-item-section.js"></script>
+  </body>
+</html>

@@ -1,0 +1,419 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif, Arial, Helvetica;
+  margin: 0;
+  /* padding: 50px; */
+  display: flex;
+  align-items: center;
+  /* height: 100vh; */
+  justify-content: center;
+}
+
+.page-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 25px;
+  width: 430px;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.page-cont i {
+  display: none;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  row-gap: 15px;
+}
+
+.line-1 h3 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.line-1 span {
+  color: orange;
+}
+
+.line-2  {
+  text-align: center;
+  opacity: .7;
+  font-size: .85rem;
+}
+
+
+
+label {
+  width: 100%;
+  display: flex;
+  position: relative;
+  margin-top: 10px;
+  flex-direction: column;
+}
+
+label span {
+  position: absolute;
+  top: -10px;
+  left: 8px;
+  font-size: .8rem;
+  background-color: white;
+  padding: 1px;
+  color: orange;
+}
+
+label input {
+  flex: 1;
+  outline-color: orange;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px rgb(170, 170, 170) solid;
+}
+
+.error-message {
+  color: rgb(215, 18, 18);
+  font-size: .7rem;
+  margin-left: 20px;
+}
+
+/* label input:hover {
+  border-color: black;
+} */
+
+input:focus {
+  
+}
+:focus::-webkit-input-placeholder {
+  display: none;
+  color: white;
+}
+
+.continue-link-cont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  row-gap: 10px;
+  border-bottom: 1px gainsboro solid;
+  padding-bottom: 22px;
+}
+
+.continue-link {
+  background-color: rgb(241, 156, 9);
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.09);
+  transition: box-shadow .4s;
+}
+
+.continue-link:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.terms-conds-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: .8rem;
+  row-gap: 5px;
+}
+
+.terms-conds-cont a {
+  color: rgb(255, 166, 0);
+}
+
+.terms-conds-cont span {
+  font-weight: 500;
+}
+
+.color {
+  color: rgb(241, 156, 9);
+}
+
+
+.facebook-login-cont {
+  background-color: rgba(0, 102, 255, 0.799);
+  color: white;
+  width: 100%;
+  transition: box-shadow .4s;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.09);
+}
+
+.facebook-login-cont:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.surpport-note {
+  font-size: .8rem;
+  text-align: center;
+  line-height: 20px;
+  margin-top: -10px;
+  width: 90%;
+}
+
+.logo {
+  font: 1.85rem sans-serif;
+  margin-top: -10px;
+}
+
+.logo span {
+  color: orange;
+}
+
+@media (min-width: 421px) and (max-width: 900px) {
+  
+  .page-cont {
+    row-gap: 20px;
+    width: 50%;
+    margin-top: 20px;
+  }
+
+  .back-to-index {
+    display: none;
+  }
+
+  .page-cont i{
+    width: 100%;
+    display: flex;
+  }
+
+  img {
+    width: 80px;
+  }
+  
+  .page-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    row-gap: 10px;
+  }
+  
+  .line-1 h3 {
+    text-align: center;
+    font-size: 1.31rem;
+    margin: 0;
+  }
+  
+  .line-2  {
+    text-align: justify;
+    opacity: .7;
+    font-size: .85rem;
+  }
+  
+  label {
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin-top: 10px;
+  }
+  
+  label span {
+    top: -8px;
+    left: 8px;
+    font-size: .75rem;
+    padding: 0px;
+  }
+  
+  label input {
+    padding: 15px;
+    border-radius: 4px;
+    width: 100%;
+  }::placeholder {
+    font-size: .9rem;
+  }
+  
+  .continue-link-cont {
+    width: 100%;
+    row-gap: 5px;
+    padding-bottom: 10px;
+  }
+  
+  .continue-link {
+    padding: 15px;
+    border-radius: 6px;
+    font-size: .86rem;
+    font-weight: 500;
+    /* margin-top: 10px; */
+  }
+  
+  .terms-conds-cont {
+    font-size: .83rem;
+    row-gap: 5px;
+  }
+  
+  .terms-conds-cont span {
+    font-weight: 500;
+    text-align: center;
+    font-size: .8rem;
+  }
+  
+  .facebook-login-cont {
+    padding: 15px;
+    font-size: .9rem;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+  
+  .surpport-note {
+    font-size: .8rem;
+    text-align: justify;
+    line-height: 14px;
+    margin-top: -10px;
+    width: 100%;
+  }
+  
+  .logo {
+    font: 1.5rem sans-serif;
+    margin-top: -10px;
+  }
+}
+
+@media (max-width: 420px) {
+  
+  .page-cont {
+    row-gap: 15px;
+    width: 75%;
+    margin-top: 20px;
+  }
+
+  .back-to-index {
+    width: 100%;
+    text-decoration: none;
+    margin-bottom: -10px;
+    margin-left: -30px;
+    color: rgb(20, 20, 20);
+  }
+
+  .page-cont i{
+    width: 100%;
+    display: flex;
+  }
+
+  img {
+    width: 60px;
+  }
+  
+  .page-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    row-gap: 10px;
+  }
+  
+  .line-1 h3 {
+    text-align: center;
+    font-size: .91rem;
+  }
+  
+  .line-2  {
+    text-align: justify;
+    opacity: .7;
+    font-size: .7rem;
+  }
+  
+  label {
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin-top: 5px;
+  }
+  
+  label span {
+    top: -8px;
+    left: 8px;
+    font-size: .65rem;
+    padding: 1px;
+  }
+  
+  label input {
+    padding: 13px;
+    border-radius: 4px;
+    width: 100%;
+  }::placeholder {
+    font-size: .7rem;
+  }
+  
+  .continue-link-cont {
+    width: 100%;
+    row-gap: 5px;
+    padding-bottom: 10px;
+    /* margin-top: 10px; */
+  }
+  
+  .continue-link {
+    padding: 13px;
+    border-radius: 6px;
+    font-size: .81rem;
+    font-weight: 500;
+  }
+  
+  .continue-link:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .terms-conds-cont {
+    font-size: .8rem;
+    row-gap: 5px;
+  }
+  
+  .terms-conds-cont span {
+    font-weight: 500;
+    text-align: center;
+    font-size: .7rem;
+  }
+  
+  .facebook-login-cont {
+    padding: 13px;
+    font-size: .8rem;
+    border-radius: 5px;
+    font-weight: 500;
+  }
+  
+  .surpport-note {
+    font-size: .7rem;
+    text-align: justify;
+    line-height: 14px;
+    margin-top: -10px;
+    width: 100%;
+  }
+  
+  .logo {
+    font: 1.3rem sans-serif;
+    margin-top: -10px;
+  }
+
+  .error-message {
+    bottom: -21px;
+    font-size: .63rem;
+    margin-top: 2px;
+    margin-left: 10px;
+  }
+  
+}
+
+.hide {
+  display: none;
+}
+
+.wrong-details {
+  border-color: rgb(215, 18, 18);
+  outline-color: rgb(215, 18, 18);
+}

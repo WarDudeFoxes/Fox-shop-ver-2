@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="Images/cart.668e6453.svg" type="image/x-icon">
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/carts.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav">
+        <div class="left-section hide-pop">
+          <i class="fa-solid fa-bars"></i>
+          <a href="index.html">
+            <div class="logo">Fox-<span>shop</span></div>
+          </a>
+        </div>
+        
+        <div class="middle-section hide-pop">
+          <label>
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <input type="search" placeholder="Search products">
+          </label>
+          <button>Search</button>
+        </div>
+  
+        <div class="right-section">
+          <div class="search-icon-pop">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </div>
+          <div class="account-container">
+            <div class="account">
+              <a href="#" class="joinProfile-link">
+                <i class="fa-regular fa-user" aria-hidden="true"></i>
+                <i class="fa fa-check-circle hide" aria-hidden="true"></i>
+              </a>
+              <div class="text account-text">Account</div>
+              <i class="fa fa-angle-down account-arrow" aria-hidden="true"></i>
+            </div>
+            <div class="sign-in-container hide">
+              <div class="sign-in-link">
+                <a href="#">SIGN IN</a>
+              </div>
+              <div class="options">
+                <a href="#" class="account-link">
+                  <div class="options-line">
+                    <i class="fa-regular fa-user" aria-hidden="true"></i>
+                    <div class="option-text">My Account</div>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="options-line">
+                    <i class="fa-solid fa-shopping-bag" aria-hidden="true"></i>
+                    <div class="option-text">Orders</div>
+                  </div>
+                </a>
+                <a href="#" class="saved-items-link">
+                  <div class="options-line">
+                    <i class="fa-regular fa-heart" aria-hidden="true"></i>
+                    <div class="option-text">Saved Items</div>
+                  </div>
+                </a>
+              </div>
+  
+            </div>
+          </div>
+          <div class="help-container">
+            <div class="account">
+              <i class="fa-regular fa-question-circle"></i>
+              <div class="text">Help</div>
+              <i class="fas fa-angle-down help-arrow" aria-hidden="true"></i>
+            </div>
+            <div class="helps hide">
+              <span>Place an order</span>
+              <span>Track an order</span>
+              <span>Cancel an order</span>
+              <span>Help Center</span>
+            </div>
+          </div>
+          <div class="account hide-pop">
+            <div class="cart-image-container">
+              <span class="cart-quantity"></span>
+              <img src="Images/shopping-cart_5108212.png" alt="">
+              <div class="text">Cart</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pop-up-search hide">
+        <label>
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <input type="search" placeholder="Search products">
+        </label>
+      </div>
+    </nav>
+
+    <div class="page-cart-display-container hide-pop">
+      <div class="page-cart-display ">
+        <div class="cart-container hde">
+            <div class="container-header">
+              <span class="js-cart-quantity"></span>
+            </div>
+            <div class="cart-product-flex-container"></div>
+        </div>
+        <div class="checkout-link-container hid">
+          <div class="cart-summary-container">
+            <div class="cart-summary-header">
+              <span>CART SUMMARY</span>
+            </div>
+            <div class="cart-summary-content">
+              <div class="summary-line">
+                <span>Subtotal</span>
+                <div class="cart-total">
+                  $ 2,000
+                </div>
+              </div>
+              <div class="summary-line">
+                <div class="cart-note">Delivery fees not included yet.</div>
+              </div>
+            </div>
+            <div class="button-container">
+              <a href="#">
+                <button>CHECKOUT(<span>$ 2,000</span>)</button>
+              </a>
+            </div>
+          </div>
+          <div class="return-note-cont">
+            <h4>Returns are easy</h4>
+            <span>
+              Free return within 7 days for ALL eligible items
+            </span>
+            <a href="#">Details</a>
+          </div>
+        </div>
+  
+        <div class="empty-cart hide">
+          <img src="Images/cart.668e6453.svg" alt="">
+          <span>Your cart is emthy!</span>
+          <small>Browse our categories discover our best deals!</small>
+          <a href="index.html">START SHOPPING</a>
+        </div>
+      </div>
+  
+      <div class="saved-item-container">
+        <div class="saved-header">
+          <span class="save-items-length">Saved items (7)</span>
+          <div class="more-saved">
+            <a href="#" class="more-saved more-save-link">
+              <span>SEE ALL</span>
+              <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="saved-item-grid js-cart-saved-items-grid"></div>
+      </div>
+
+      <div class="customer-views-cont">
+        <div class="customer-views-header">
+          <span>
+            Customers who viewed this also viewed
+          </span>
+        </div>
+
+        <div class="customer-views-product-grid"></div>
+      </div>
+    </div>
+
+    <script type="module" src="Scripts/cart-section.js"></script>
+  </body>
+</html>
