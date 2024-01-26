@@ -122,6 +122,11 @@ body {
   border-bottom: 1px gainsboro solid;
 }
 
+.account-link {
+  text-decoration: none;
+  color: black;
+}
+
 .save-item-header span {
   font-size: 1.05rem;
   font-weight: 600;
