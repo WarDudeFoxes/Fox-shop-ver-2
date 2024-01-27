@@ -1,4 +1,7 @@
 import { entryPointFun } from "./Entry-data/entry-validation.js";
-import { entrydata } from "./Entry-data/entry-data.js";
+import { loginData } from "./Login.data/login.js";
 
 entryPointFun();
+if (loginData) {
+  location.replace('account.html')
+}

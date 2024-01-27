@@ -1,12 +1,6 @@
-import {userDetails} from './user-details.js';
 import { entrydata } from '../Entry-data/entry-data.js';
-import { signupEntry } from './signup-entry.js';
-
-
 
 export function userDetails01() {
-  console.log(userDetails);
-  console.log(signupEntry);
   const password = document.querySelector('.password')
   const confirmPassword = document.querySelector('.confirm-password')
   const bodyEL = document.querySelector('body')
@@ -50,6 +44,6 @@ function passwordFocus(password, confirmPassword) {
   } else {
     document.querySelector('.details01').classList.add('hide');
     document.querySelector('.details02').classList.remove('hide');
-    console.log(entrydata[0]);
+    console.log(entrydata);
   }
 };

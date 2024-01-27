@@ -1,9 +1,8 @@
 import { userDetails } from "../Sign-up-Data/user-details.js";
 import { loginData } from "../Login.data/login.js";
-// import { loginData } from "../Login.data/login-data.js";
+
 
 export function generalCon() {
-
   const acc = document.querySelector('.account-container');
   const helps = document.querySelector('.help-container');
   
@@ -54,7 +53,6 @@ export function generalCon() {
     });
   });
 };
-
 
 export function updataProfile() {
 

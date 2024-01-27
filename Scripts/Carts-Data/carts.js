@@ -35,16 +35,6 @@ export function removeFromCart(productId) {
   saveCartToStorage();
 };
 
-// export function removeAllCart() {
-//   let newCart = [];
-//   carts = newCart;
-// };
-
-
 export function saveCartToStorage() {
   localStorage.setItem('fox-shopCart', JSON.stringify(carts))
 };
-
-
-
-// localStorage.removeItem('fox-shopCart')

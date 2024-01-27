@@ -1,7 +1,5 @@
 import { userDetails, saveUserDetails } from "./user-details.js";
 import { signupEntry } from "./signup-entry.js";
-// import { loginData, saveLoginData } from "../Login.data/login.js";
-
 export let loginData = JSON.parse(localStorage.getItem('buyer-login-info')) || ''
 
 export function saveLoginData() {
@@ -32,7 +30,7 @@ export function userDetails03(emailValidation, phoneValidation) {
 
 
   continueLink4.addEventListener('click', () => {
-    dobFocus(day,month,year,firstName, lastName, password, email,phone,emailValidation, phoneValidation);
+    dobFocus(day,month,year,firstName, lastName, password, email,phone,emailValidation, phoneValidation, check);
   });
 
   bodyEL.addEventListener('click', () => { 
@@ -48,7 +46,7 @@ export function userDetails03(emailValidation, phoneValidation) {
   });
 };
 
-function dobFocus(day,month,year,firstName, lastName, password, email,phone,emailValidation, phoneValidation) {
+function dobFocus(day,month,year,firstName, lastName, password, email,phone,emailValidation, phoneValidation, check) {
   const gendarDisplay = document.querySelector('.gender-type');
 
   const noDay = (day.value === 'Day');
@@ -61,43 +59,49 @@ function dobFocus(day,month,year,firstName, lastName, password, email,phone,emai
     month.focus();
   } else if (noYear) {
     year.focus();
-  } else {
+  } else if (!check.checked) {
+    check.focus();
+    console.log('hi');
+  } else if (emailValidation) {
+    document.querySelector('.details03').classList.add('hide');
+    document.querySelector('.success-cont').classList.remove('hide');
+    console.log('ok');
+    
+      
+    userDetails.push({
+      password: password.value,
+      firstName:  `${firstName.value[0].toUpperCase() + firstName.value.substring(1)}`,
+      lastName:  `${lastName.value[0].toUpperCase() + lastName.value.substring(1)}`,
+      email: signupEntry.toLowerCase(),
+      phoneNumber: phone.value,
+      DoB: `${day.value}/${month.value}/${year.value}`,
+      gender: gendarDisplay.innerHTML
+    });
+    saveUserDetails();
+    loginData = signupEntry
+    saveLoginData();
+    saveUserDetails();
+    pageRedirect() 
+
+  } else if (phoneValidation) {
+    console.log('ok');
     document.querySelector('.details03').classList.add('hide');
     document.querySelector('.success-cont').classList.remove('hide');
     
-    if (emailValidation) {
-        
-      userDetails.push({
-        password: password.value,
-        firstName:  `${firstName.value[0].toUpperCase() + firstName.value.substring(1)}`,
-        lastName:  `${lastName.value[0].toUpperCase() + lastName.value.substring(1)}`,
-        email: signupEntry[0].toLowerCase(),
-        phoneNumber: phone.value,
-        DoB: `${day.value}/${month.value}/${year.value}`,
-        gender: gendarDisplay.innerHTML
-      });
-      saveUserDetails();
-      loginData = signupEntry[0]
-      saveLoginData();
-      saveUserDetails();
-      pageRedirect() 
+    userDetails.push({
+      password: password.value,
+      firstName:  `${firstName.value[0].toUpperCase() + firstName.value.substring(1)}`,
+      lastName:  `${lastName.value[0].toUpperCase() + lastName.value.substring(1)}`,
+      email: email.value.toLowerCase(),
+      phoneNumber: signupEntry,
+      DoB: `${day.value}/${month.value}/${year.value}`,
+      gender: gendarDisplay.innerHTML
+    });
 
-    } else if (phoneValidation) {
-      userDetails.push({
-        password: password.value,
-        firstName:  `${firstName.value[0].toUpperCase() + firstName.value.substring(1)}`,
-        lastName:  `${lastName.value[0].toUpperCase() + lastName.value.substring(1)}`,
-        email: email.value.toLowerCase(),
-        phoneNumber: signupEntry[0],
-        DoB: `${day.value}/${month.value}/${year.value}`,
-        gender: gendarDisplay.innerHTML
-      });
-
-      loginData = signupEntry[0]
-      saveLoginData();
-      saveUserDetails();
-      pageRedirect()
-    };
+    loginData = signupEntry
+    saveLoginData();
+    saveUserDetails();
+    pageRedirect()
   };
 };
 
@@ -109,5 +113,5 @@ function pageRedirect() {
   
   setTimeout(() => {
     location.replace('index.html')
-  },2000);
+  },3000);
 };

@@ -4,6 +4,7 @@ import { userDetails02 } from "./Sign-up-Data/details02-validation.js";
 import { userDetails03 } from "./Sign-up-Data/details03-validation.js";
 import { entrydata } from "./Entry-data/entry-data.js";
 import { userDetails } from "./Sign-up-Data/user-details.js";
+import { loginData } from "./Login.data/login.js";
 
 
 const prefixCont = document.querySelector('.prefix-cont');
@@ -70,7 +71,7 @@ const userEntryEdit = document.querySelector('.edit-user-info');
 
 
 if (signupEntry) {
-  userEntry.innerHTML = signupEntry[0];
+  userEntry.innerHTML = signupEntry;
 } else {
   location.replace('entry-point.html');
 }
@@ -101,12 +102,12 @@ userDetails03(emailValidation, phoneValidation);//validation
 export function phoneNumberValidation() {
   const countryCodes = ['091', '081', '070', '090', '080'];
 
-  const phoneValidation = countryCodes.some(elem => signupEntry[0].match('^' + elem) && (entrydata[0].length > 10 && signupEntry[0].length < 12));
+  const phoneValidation = countryCodes.some(elem => signupEntry.match('^' + elem) && (entrydata.length > 10 && signupEntry.length < 12));
   return phoneValidation;
 };
 
 export function emailCheck() {
 
-  const emailValidation = (/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(signupEntry[0]);
+  const emailValidation = (/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/).test(signupEntry);
   return emailValidation;
 }; 

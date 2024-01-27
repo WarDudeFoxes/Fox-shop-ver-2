@@ -1,6 +1,4 @@
 
-
-
 export function userDetails02() {
   const continueLink3 = document.querySelector('.continue-link3');
   const firstName = document.querySelector('.first-name');

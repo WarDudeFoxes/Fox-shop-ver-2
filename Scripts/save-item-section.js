@@ -1,5 +1,5 @@
 import { generalCon } from "./Controllers/general.js";
-import { savedItems, saveWishToStorage, unsaveItem, addItemToLists } from "./Liked-Products-Data/likes.js";
+import { savedItems, unsaveItem } from "./Liked-Products-Data/likes.js";
 import { products } from "./Products-Data/products.js";
 import { updataProfile } from "./Controllers/general.js";
 import { carts } from "./Carts-Data/carts.js";

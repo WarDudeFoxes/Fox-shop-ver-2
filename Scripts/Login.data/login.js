@@ -1,5 +1,4 @@
 import { loginEntry } from "./login-entry.js";
-// import {loginData, saveLoginData} from './login-data.js';
 import { userDetails } from "../Sign-up-Data/user-details.js";
 
 
@@ -7,22 +6,21 @@ export let loginData = JSON.parse(localStorage.getItem('buyer-login-info')) || '
 
 export function saveLoginData() {
   localStorage.setItem('buyer-login-info', JSON.stringify(loginData))
-}
+};
 
 
 const userEntry = document.querySelectorAll('.user-entry');
-const userEntryEdit = document.querySelectorAll('.edit-user-info')
+const userEntryEdit = document.querySelectorAll('.edit-user-info');
 
 
 
 if (loginEntry) {
   userEntry.forEach(elem => {
-    elem.innerHTML = loginEntry[0];
+    elem.innerHTML = loginEntry;
   });
 } else if (!loginEntry) {
   // location.replace('entry-point.html');
-}
-
+};
 
 
 userEntryEdit.forEach(elem =>{
@@ -45,7 +43,7 @@ document.querySelectorAll('.login-link').forEach(elem => {
     } else {
       userDetails.forEach(info => {
         if (password.value === info.password) {
-          loginData = loginEntry[0]
+          loginData = loginEntry
           document.querySelector('.login-link').setAttribute('href', 'index.html');
           saveLoginData();
         };

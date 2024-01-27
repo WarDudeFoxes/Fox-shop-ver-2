@@ -1,5 +1,3 @@
-
-
 export function phoneNumberValidation() {
   const countryCodes = ['091', '081', '070', '090', '080'];
   const phone = document.querySelector('.user-num-Mail');

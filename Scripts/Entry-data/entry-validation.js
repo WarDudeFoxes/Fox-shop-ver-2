@@ -1,9 +1,19 @@
 import { phoneNumberValidation, emailCheck } from "./user-entry-info-validation.js";
 import { userDetails } from "../Sign-up-Data/user-details.js";
-import { signupEntry, saveSignupEntry } from "../Sign-up-Data/signup-entry.js";
-import { saveLoginEntry, loginEntry } from "../Login.data/login-entry.js";
-import { entrydata, saveEntryData } from "./entry-data.js";
 
+
+let loginEntry = JSON.parse(localStorage.getItem('login-entry')) || ''
+function saveLoginEntry() {
+  localStorage.setItem('login-entry', JSON.stringify(loginEntry));
+};
+let signupEntry = JSON.parse(localStorage.getItem('signup-entry')) || ''
+function saveSignupEntry() {
+  localStorage.setItem('signup-entry', JSON.stringify(signupEntry));
+};
+let entrydata = JSON.parse(localStorage.getItem('entry-data')) || ''
+function saveEntryData() {
+  localStorage.setItem('entry-data', JSON.stringify(entrydata));
+};
 
 export function entryPointFun() {
 
@@ -32,19 +42,19 @@ export function entryPointFun() {
       });
     
       if (detailsMatch) {
-        loginEntry.length = 0;
-        loginEntry.push(userInfo);
+        loginEntry = '';
+        loginEntry= userInfo;
         saveLoginEntry();
-        entrydata.length = 0;
-        entrydata.push(userInfo);
+        entrydata  = '';
+        entrydata = userInfo;
         saveEntryData();
         continueLink1.setAttribute('href', 'login.html');
       } else if (!detailsMatch && (phoneValidation || emailValidation)) {
-        signupEntry.length = 0
-        signupEntry.push(userInfo);
+        signupEntry = ''
+        signupEntry = userInfo;
         saveSignupEntry();
-        entrydata.length = 0;
-        entrydata.push(userInfo);
+        entrydata = '';
+        entrydata = userInfo;
         saveEntryData();
         continueLink1.setAttribute('href', 'create-acct.html');
       };

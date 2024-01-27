@@ -9,7 +9,7 @@ userDetails.forEach(info => {
 });
 
 let savedLogItem = loginData ? infoMatch.email
-: ''
+: '';
 
 export let savedItems = JSON.parse(localStorage.getItem(savedLogItem)) || [];
 
@@ -37,7 +37,7 @@ export function addItemToLists(productId) {
     };
     
     console.log(savedItems);
-    saveWishToStorage()
+    saveWishToStorage();
   }
 };
 
