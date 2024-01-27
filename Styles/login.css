@@ -313,7 +313,7 @@ label {
   
   label {
     width: 100%;
-    padding: 13px;
+    padding: 10px;
     font-size: .8rem;
     /* margin-bottom: 2px; */
   }
@@ -333,7 +333,7 @@ label {
   }
   
   .password-cont input{
-    padding: 13px;
+    padding: 10px;
   }
   
   .password-cont input:focus {
@@ -353,7 +353,7 @@ label {
   }
   
   .login-link {
-    padding: 13px;
+    padding: 10px;
     font-size: .85rem;
   }
   

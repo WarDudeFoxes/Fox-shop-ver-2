@@ -692,7 +692,7 @@ input:focus {
   .page-container, .page2-content, .page3-content, .success-cont {
     row-gap: 10px;
     width: 80%;
-    margin-top: 15px;
+    margin-top: 10px;
   }
 
 
@@ -707,7 +707,8 @@ input:focus {
   
   .header h4 {
     font-size: .95rem;
-    margin-bottom: 5px;
+    margin: 0;
+    margin: 5px 0px;
     text-align: center;
   }
   
@@ -725,7 +726,7 @@ input:focus {
   label {
     width: 100%;
     display: flex;
-    padding: 10px;
+    padding: 13px;
     column-gap: 5px;
     justify-content: space-between;
   }
@@ -745,14 +746,15 @@ input:focus {
   }
   
   .password-cont input , .c-password-cont input , .last-name-cont input, .first-name-cont input{
-    padding: 12px;
+    padding: 13px;
     width: 100%;
   }::placeholder {
     font-size: .73rem;
   }
   
   .continue-link , .start-link{
-    padding: 9px;
+    padding: 13px;
+    margin-top: 7px;
     border-radius: 4px;
     font-size: .8rem;
   }
@@ -760,15 +762,15 @@ input:focus {
   
   .surpport-note {
     font-size: .8rem;
-    text-align: center;
+    text-align: justify;
     line-height: 18px;
-    margin-top: -10px;
+    margin-top: -5px;
     width: 100%;
   }
   
   .logo {
     font: 1.3rem sans-serif;
-    margin-top: -10px;
+    margin-top: -5px;
   }
   
   .logo span {
@@ -776,7 +778,7 @@ input:focus {
   }
   
   .user-personal-details, .user-personal-details2 {
-    margin-top: 30px;
+    margin-top: 20px;
     width: 100%;
   }
   
@@ -789,7 +791,7 @@ input:focus {
   .prefix-cont {
     position: relative;
     width: 50px !important;
-    padding: 10px 6px;
+    padding: 13px 6px;
     column-gap: 5px;
     display: flex;
     justify-content: space-between;
@@ -831,13 +833,13 @@ input:focus {
   
   .phone-digit span {
     position: absolute;
-    top: -10px;
+    top: -8px;
     left: 5px;
     font-size: .7rem;
   }
   
   .phone-digit input {
-    padding: 10px;
+    padding: 13px;
     border-radius: 4px;
     width: 100%;
   }
@@ -845,13 +847,17 @@ input:focus {
   .page3-content {
     margin-top: 10px;
   }
-  
+
+  /* .phone-digit small {
+    bottom: -25px;
+  }
+   */
   .gender-label {
     border: 1px gainsboro solid;
     display: flex;
     justify-content: space-between;
     position: relative;
-    padding: 9px;
+    padding: 13px;
     font-size: .8rem;
     width: 100%;
     margin-top: -25px;
@@ -887,7 +893,7 @@ input:focus {
   
   .gender-select div {
     transition: background-color .3s;
-    padding: 10px;
+    padding: 13px;
     cursor: pointer;
   }
   
@@ -989,7 +995,13 @@ input:focus {
     font-size: 1.1rem;
   }
 
-  
+  .error-message {
+    position: absolute;
+    color: rgb(179, 18, 18);
+    bottom: -18px;
+    margin-left: 5px;
+    font-size: .7rem;
+  }
 }
 
 .hide {
