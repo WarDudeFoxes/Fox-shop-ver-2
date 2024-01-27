@@ -13,9 +13,17 @@ export function saveLoginData() {
 const userEntry = document.querySelectorAll('.user-entry');
 const userEntryEdit = document.querySelectorAll('.edit-user-info')
 
-userEntry.forEach(elem => {
-  elem.innerHTML = loginEntry[0];
-});
+
+
+if (loginEntry) {
+  userEntry.forEach(elem => {
+    elem.innerHTML = loginEntry[0];
+  });
+} else if (!loginEntry) {
+  // location.replace('entry-point.html');
+}
+
+
 
 userEntryEdit.forEach(elem =>{
   elem.addEventListener('click', () => {

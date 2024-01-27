@@ -720,7 +720,7 @@ input:focus {
   
   .user-login-details, .user-personal-details {
     width: 100%;
-    row-gap: 12px;
+    row-gap: 15px;
   }
   
   label {
@@ -743,6 +743,7 @@ input:focus {
   
   .password-cont span , .c-password-cont span , .last-name-cont span, .first-name-cont span, .prefix, .gender-label span, .month-cont span, .day-cont span, .year-cont span, .phone-digit span{
     font-size: .7rem;
+    top: -6px;
   }
   
   .password-cont input , .c-password-cont input , .last-name-cont input, .first-name-cont input{
@@ -952,6 +953,7 @@ input:focus {
   
   .terms-condi-cont .terms-note {
     font-size: .7rem;
+    text-align: center;
   }
 
   .success-cont {

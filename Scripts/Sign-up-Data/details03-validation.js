@@ -107,23 +107,7 @@ function pageRedirect() {
     document.querySelector('.time').innerHTML = `${1} seconds`
   },1000);
   
-  setInterval(() => {
-    document.querySelector('.time').innerHTML = `${2} seconds`
-  },2000);
-  
-  setInterval(() => {
-    document.querySelector('.time').innerHTML = `${3} seconds`
-  },3000);
-  
-  setInterval(() => {
-    document.querySelector('.time').innerHTML = `${4} seconds`
-  },4000);
-  
-  setInterval(() => {
-    document.querySelector('.time').innerHTML = `${5} seconds`
-  },5000);
-
   setTimeout(() => {
     location.replace('index.html')
-  },6000);
+  },2000);
 };

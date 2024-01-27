@@ -68,7 +68,12 @@ genderLabel.addEventListener('click', () => {
 const userEntry = document.querySelector('.user-entry');
 const userEntryEdit = document.querySelector('.edit-user-info');
 
-userEntry.innerHTML = signupEntry[0];
+
+if (signupEntry) {
+  userEntry.innerHTML = signupEntry[0];
+} else {
+  location.replace('entry-point.html');
+}
 
 userEntryEdit.addEventListener('click', () => {
   userEntryEdit.setAttribute('href', 'entry-point.html');
