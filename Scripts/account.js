@@ -4,10 +4,10 @@ import { updataProfile } from "./Controllers/general.js";
 import { userDetails } from "./Sign-up-Data/user-details.js";
 import { products } from "./Products-Data/products.js";
 
-export let loginData = JSON.parse(localStorage.getItem('login-info')) || ''
+export let loginData = JSON.parse(localStorage.getItem('buyer-login-info')) || ''
 
 export function saveLoginData() {
-  localStorage.setItem('login-info', JSON.stringify(loginData))
+  localStorage.setItem('buyer-login-info', JSON.stringify(loginData))
 }
 
 

@@ -1,5 +1,5 @@
 
-export const userDetails = JSON.parse(localStorage.getItem('buyer-details')) ||
+export const userDetails = JSON.parse(localStorage.getItem('user-details')) ||
 [{
   firstName: 'Waris',
   lastName: 'Ganiu',
@@ -12,5 +12,5 @@ export const userDetails = JSON.parse(localStorage.getItem('buyer-details')) ||
 
 
 export function saveUserDetails() {
-  localStorage.setItem('buyer-details', JSON.stringify(userDetails));
+  localStorage.setItem('user-details', JSON.stringify(userDetails));
 }

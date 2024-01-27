@@ -3,10 +3,10 @@ import { loginEntry } from "./login-entry.js";
 import { userDetails } from "../Sign-up-Data/user-details.js";
 
 
-export let loginData = JSON.parse(localStorage.getItem('login-info')) || ''
+export let loginData = JSON.parse(localStorage.getItem('buyer-login-info')) || ''
 
 export function saveLoginData() {
-  localStorage.setItem('login-info', JSON.stringify(loginData))
+  localStorage.setItem('buyer-login-info', JSON.stringify(loginData))
 }
 
 
