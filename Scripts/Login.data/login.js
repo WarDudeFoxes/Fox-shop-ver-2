@@ -34,20 +34,17 @@ const password = document.querySelector('.password');
 
 document.querySelectorAll('.login-link').forEach(elem => {
   elem.addEventListener('click', () => {
-    if (!password.value) {
-      password.focus();
-      password.style.borderColor = 'rgb(215, 18, 18)'
-      password.style.outlineColor = 'rgb(215, 18, 18)'
-      document.querySelector('.password-cont small').classList.remove('hide')
-      document.querySelector('.login-link').style.opacity = .4
-    } else {
-      userDetails.forEach(info => {
-        if (password.value === info.password) {
-          loginData = loginEntry
-          document.querySelector('.login-link').setAttribute('href', 'index.html');
-          saveLoginData();
-        };
-      });
-    };
+    userDetails.forEach(info => {
+      if (password.value === info.password) {
+        loginData = loginEntry
+        document.querySelector('.login-link').setAttribute('href', 'index.html');
+      } else if ((password.value !== info.password) || (!password.value)) {
+        password.focus();
+        password.style.borderColor = 'rgb(215, 18, 18)'
+        password.style.outlineColor = 'rgb(215, 18, 18)'
+        document.querySelector('.password-cont small').classList.remove('hide')
+        document.querySelector('.login-link').style.opacity = .4
+      }
+    });
   });
 });

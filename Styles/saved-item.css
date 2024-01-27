@@ -353,7 +353,11 @@ body {
   }
 
   .customer-views-cont {
-    margin-top: -5px;
+    margin-top: 5px;
+    margin-bottom: -30px;
+  }
+
+  .emthy-saved-cart {
   }
 }
 
