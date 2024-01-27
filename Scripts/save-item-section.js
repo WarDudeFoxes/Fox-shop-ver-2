@@ -3,6 +3,7 @@ import { savedItems, saveWishToStorage, unsaveItem, addItemToLists } from "./Lik
 import { products } from "./Products-Data/products.js";
 import { updataProfile } from "./Controllers/general.js";
 import { carts } from "./Carts-Data/carts.js";
+import { loginData } from "./Login.data/login.js";
 
 generalCon();
 updataProfile();
@@ -84,3 +85,7 @@ function calculateCartQuantity() {
     elem.innerHTML = cartquantity;
   });
 };  
+
+if (!loginData) {
+  location.replace('entry-point.html');
+};

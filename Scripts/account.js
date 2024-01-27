@@ -47,16 +47,20 @@ document.querySelectorAll('.logout').forEach(link => {
   });
 });
 
-let infoMatch;
-userDetails.forEach(info => {
-  if ((info.email  === loginData ) || (info.phoneNumber === loginData )) {
-    infoMatch = info
-  }; 
-});
+if (loginData) {
 
-
-document.querySelector('.account-name').innerHTML = `${infoMatch.firstName} ${infoMatch.lastName}`
-document.querySelector('.account-email').innerHTML = `${infoMatch.email}`
+  let infoMatch;
+  userDetails.forEach(info => {
+    if ((info.email  === loginData ) || (info.phoneNumber === loginData )) {
+      infoMatch = info
+    }; 
+  });
+  
+  document.querySelector('.account-name').innerHTML = `${infoMatch.firstName} ${infoMatch.lastName}`
+  document.querySelector('.account-email').innerHTML = `${infoMatch.email}`
+} else {
+  location.replace('entry-point.html')
+}
 
 
 
@@ -81,3 +85,7 @@ products.forEach(product=> {
 });
 document.querySelector('.customer-views-product-grid')
   .innerHTML = cartsCustomerVeiw;
+
+if (!loginData) {
+  location.replace('entry-point.html');
+};
