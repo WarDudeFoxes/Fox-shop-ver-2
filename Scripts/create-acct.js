@@ -3,9 +3,6 @@ import { userDetails01 } from "./Sign-up-Data/details01-validation.js";
 import { userDetails02 } from "./Sign-up-Data/details02-validation.js";
 import { userDetails03 } from "./Sign-up-Data/details03-validation.js";
 import { entrydata } from "./Entry-data/entry-data.js";
-import { userDetails } from "./Sign-up-Data/user-details.js";
-import { loginData } from "./Login.data/login.js";
-
 
 const prefixCont = document.querySelector('.prefix-cont');
 const hidePop = document.querySelectorAll('.hide-pop');

@@ -52,7 +52,8 @@ body {
   display: flex;
   flex-direction: column;
   height: fit-content;
-  box-shadow: 0 0 30px rgb(0, 0, 0, 0.05);
+  /* box-shadow: 0 0 30px rgb(0, 0, 0, 0.05); */
+  box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
 }
 
 .link-row {
@@ -233,6 +234,7 @@ body {
   font-weight: 600;
 }
 
+
 @media (max-width: 420px) {
       
   .saved-item-page-display-cont {
@@ -349,6 +351,10 @@ body {
     font-size: .7rem;
     font-weight: 500;
   }
+
+  .customer-views-cont {
+    margin-top: -5px;
+  }
 }
 
 @media (min-width: 421px) and (max-width: 900px) {
@@ -368,6 +374,7 @@ body {
     box-shadow: 0 0 30px rgb(0, 0, 0, 0.05);
     border-radius: 5px;
     flex: 1;
+    margin-top: 20px;
   }
 
   .save-item-header {
@@ -460,5 +467,9 @@ body {
   .remove-saved-product span{
     font-size: .7rem;
     font-weight: 500;
+  }
+
+  .customer-views-cont {
+    margin-top: -5px;
   }
 }

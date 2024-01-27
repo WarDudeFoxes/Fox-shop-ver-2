@@ -2,7 +2,9 @@ import { carts } from "./Carts-Data/carts.js";
 import { updataProfile } from "./Controllers/general.js";
 import { userDetails } from "./Sign-up-Data/user-details.js";
 import { products } from "./Products-Data/products.js";
+import { generalCon } from "./Controllers/general.js";
 
+generalCon();
 export let loginData = JSON.parse(localStorage.getItem('buyer-login-info')) || ''
 
 export function saveLoginData() {
