@@ -44,35 +44,35 @@ calculateCartQuantity();
 export function productHTMLFun() {
 
   let productHTML = '';
-  allProduct.forEach(product => {
+  allProduct.forEach(({id, name, priceCent, rating, image}) => {
     productHTML += 
     `
-      <div class="product-container product-container-${product.id}" data-product-id="${product.id}">
+      <div class="product-container product-container-${id}" data-product-id="${id}">
          
-        <i class="fa-regular fa-heart wish-item wish-item-${product.id}" data-product-id="${product.id}"></i>
-        <img src="${product.image}" alt="">
+        <i class="fa-regular fa-heart wish-item wish-item-${id}" data-product-id="${id}"></i>
+        <img src="${image}" alt="">
         <div class="product-details">
           <div class="product-name">
-            ${product.name}
+            ${name}
           </div>
           <div class="product-price">
-            $${(product.priceCent/100).toFixed(2)}
+            $${(priceCent/100).toFixed(2)}
           </div>
           <div class="rating">
             <div class="rating-icon">
-             ${product.rating.icon}
+             ${rating.icon}
             </div>
             <div class="rate-count">
-              (${product.rating.count})
+              (${rating.count})
             </div>
           </div>
         </div>
-        <button class="js-add-to-cart js-add-to-cart-${product.id}" data-product-id="${product.id}">ADD TO CART</button>
+        <button class="js-add-to-cart js-add-to-cart-${id}" data-product-id="${id}">ADD TO CART</button>
 
-        <div class="order-options order-options-${product.id} hide">
-          <i class="fas fa-minus js-cart-sub" data-product-id="${product.id}"></i>
-          <small class="cart-quantity-${product.id}"></small>
-          <i class="fas fa-plus js-cart-add" data-product-id="${product.id}"></i>
+        <div class="order-options order-options-${id} hide">
+          <i class="fas fa-minus js-cart-sub" data-product-id="${id}"></i>
+          <small class="cart-quantity-${id}"></small>
+          <i class="fas fa-plus js-cart-add" data-product-id="${id}"></i>
         </div>
       </div>
     `;

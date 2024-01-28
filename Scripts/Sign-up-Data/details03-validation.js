@@ -84,9 +84,9 @@ function dobFocus(day,month,year,firstName, lastName, password, email,phone,emai
     pageRedirect() 
 
   } else if (phoneValidation) {
-    console.log('ok');
     document.querySelector('.details03').classList.add('hide');
     document.querySelector('.success-cont').classList.remove('hide');
+    document.querySelector('.greet').innerHTML = `${lastName.value}, Your account has been created!`
     
     userDetails.push({
       password: password.value,
