@@ -65,7 +65,7 @@ function dobFocus(day,month,year,firstName, lastName, password, email,phone,emai
   } else if (emailValidation) {
     document.querySelector('.details03').classList.add('hide');
     document.querySelector('.success-cont').classList.remove('hide');
-    console.log('ok');
+    document.querySelector('.greet').innerHTML = `${lastName.value}, Your account has been created!`;
     
       
     userDetails.push({
@@ -86,7 +86,7 @@ function dobFocus(day,month,year,firstName, lastName, password, email,phone,emai
   } else if (phoneValidation) {
     document.querySelector('.details03').classList.add('hide');
     document.querySelector('.success-cont').classList.remove('hide');
-    document.querySelector('.greet').innerHTML = `${lastName.value}, Your account has been created!`
+    document.querySelector('.greet').innerHTML = `${lastName.value}, Your account has been created!`;
     
     userDetails.push({
       password: password.value,
