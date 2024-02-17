@@ -176,7 +176,7 @@ input:focus {
   color: orange;
 }
 
-@media (min-width: 421px) and (max-width: 900px) {
+@media (min-width: 451px) and (max-width: 900px) {
   
   .page-cont {
     row-gap: 20px;
@@ -285,7 +285,7 @@ input:focus {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 450px) {
   
   .page-cont {
     row-gap: 15px;

@@ -399,7 +399,7 @@ input:focus {
   font-size: 1.9rem;
 }
 
-@media (min-width: 421px) and (max-width: 900px) {
+@media (min-width: 451px) and (max-width: 900px) {
   
   .page-container, .page2-content, .page3-content, .success-cont {
     row-gap: 15px;
@@ -687,7 +687,7 @@ input:focus {
     
 }
 
-@media (max-width: 420px) {
+@media (max-width: 450px) {
   
   .page-container, .page2-content, .page3-content, .success-cont {
     row-gap: 10px;
